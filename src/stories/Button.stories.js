@@ -1,6 +1,6 @@
 import { expect } from '@storybook/jest';
 import { Button } from './Button';
-import { within } from '@storybook/testing-library';
+import { within } from '@storybook/test';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
@@ -17,8 +17,7 @@ export default {
     backgroundColor: { control: 'color' },
   },
 
-  play: async function ({canvasElement}) {
-    const canvas = await within(canvasElement);
+  play: function () {
     expect(4).toEqual(4);
   }
 };
